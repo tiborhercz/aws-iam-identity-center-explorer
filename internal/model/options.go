@@ -1,7 +1,11 @@
 package model
 
-type Options struct {
+type RootOptions struct {
+	Region          string
 	InstanceArn     string
 	IdentityStoreId string
-	ExportType      string
+}
+
+type Options struct {
+	ExportType string
 }

@@ -7,9 +7,9 @@ import (
 	"log"
 )
 
-func InitConfig() aws.Config {
+func InitConfig(region string) aws.Config {
 	cfg, err := config.LoadDefaultConfig(context.Background(),
-		config.WithRegion("eu-west-1"),
+		config.WithRegion(region),
 	)
 
 	if err != nil {

@@ -21,7 +21,7 @@ var (
 
 			log.Println("Getting the SSO Groups information. This may take a while...")
 
-			data := ssoexplore.Explore(groupsOptions.InstanceArn, groupsOptions.IdentityStoreId)
+			data := ssoexplore.Explore(rootOptions.InstanceArn, rootOptions.IdentityStoreId, rootOptions.Region)
 
 			groupsData := ssoexplore.TransformDataToGroups(data)
 
@@ -41,7 +41,5 @@ var (
 
 func init() {
 	rootCmd.AddCommand(groupsCmd)
-	groupsCmd.Flags().StringVar(&groupsOptions.InstanceArn, "instanceArn", "", "The ARN of the IAM Identity Center instance under which the operation will be executed.")
-	groupsCmd.Flags().StringVar(&groupsOptions.IdentityStoreId, "identityStoreId", "", "The globally unique identifier for the identity store.")
 	groupsCmd.Flags().StringVar(&groupsOptions.ExportType, "exportType", "", "Export results to a file. Allowed values: 'json' or 'csv'")
 }

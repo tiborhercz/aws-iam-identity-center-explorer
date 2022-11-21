@@ -20,7 +20,7 @@ var (
 			log.SetFlags(0)
 
 			log.Println("Getting the SSO Accounts information. This may take a while...")
-			data := ssoexplore.Explore(accountsOptions.InstanceArn, accountsOptions.IdentityStoreId)
+			data := ssoexplore.Explore(rootOptions.InstanceArn, rootOptions.IdentityStoreId, rootOptions.Region)
 
 			jsondata, _ := json.Marshal(data)
 
@@ -38,7 +38,5 @@ var (
 
 func init() {
 	rootCmd.AddCommand(accountsCmd)
-	accountsCmd.Flags().StringVar(&accountsOptions.InstanceArn, "instanceArn", "", "The ARN of the IAM Identity Center instance under which the operation will be executed.")
-	accountsCmd.Flags().StringVar(&accountsOptions.IdentityStoreId, "identityStoreId", "", "The globally unique identifier for the identity store.")
 	accountsCmd.Flags().StringVar(&accountsOptions.ExportType, "exportType", "", "Export results to a file. Allowed values: 'json' or 'csv'")
 }

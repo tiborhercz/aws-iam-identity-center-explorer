@@ -18,8 +18,8 @@ type SsoGroupInformation struct {
 	AccountId   string
 }
 
-func Explore(instanceArn string, identityStoreId string) map[string]SsoAccountInformation {
-	awscfg := awsconfig.InitConfig()
+func Explore(instanceArn string, identityStoreId string, region string) map[string]SsoAccountInformation {
+	awscfg := awsconfig.InitConfig(region)
 
 	groupsAttachedToAccounts := make(map[string]SsoAccountInformation)
 

@@ -6,11 +6,15 @@ import (
 )
 
 func validateOptions(cmd *cobra.Command, args []string) error {
-	if groupsOptions.IdentityStoreId == "" {
+	if rootOptions.Region == "" {
+		log.Fatalln("--region should be provided")
+	}
+
+	if rootOptions.IdentityStoreId == "" {
 		log.Fatalln("--identityStoreId should be provided")
 	}
 
-	if groupsOptions.InstanceArn == "" {
+	if rootOptions.InstanceArn == "" {
 		log.Fatalln("--instanceArn should be provided")
 	}
 
