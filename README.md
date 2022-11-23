@@ -62,12 +62,12 @@ Groups attached to accounts
 
 Groups data structure
 ```shell
-go run . groups --identityStoreId IDENTITY_STORE_ID --instanceArn INSTANCE_ARN
+go run . groups --identityStoreId IDENTITY_STORE_ID --instanceArn INSTANCE_ARN --region AWS_REGION
 ```
 
 Groups data structure
 ```shell
-go run . accounts  --identityStoreId IDENTITY_STORE_ID --instanceArn INSTANCE_ARN
+go run . accounts  --identityStoreId IDENTITY_STORE_ID --instanceArn INSTANCE_ARN --region AWS_REGION
 ```
 
 ## AWS Authentication
