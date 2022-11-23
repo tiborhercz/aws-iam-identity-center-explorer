@@ -60,6 +60,11 @@ Groups attached to accounts
 
 # How to run
 
+Required parameters:
+- `identityStoreId` - The globally unique identifier for the identity store.
+- `instanceArn` - The ARN of the IAM Identity Center instance under which the operation will be executed.
+- `region` - The AWS region.
+
 Groups data structure
 ```shell
 go run . groups --identityStoreId IDENTITY_STORE_ID --instanceArn INSTANCE_ARN --region AWS_REGION
