@@ -18,7 +18,7 @@ To get an overview of the accounts attached to groups you have first retrieve va
 This is done as follows:
 
 1. Get all accounts in the organization
-2. Get the SSO permissions sets attached to the accounts
+2. Get the SSO permissions sets attached to those accounts
 3. List the account SSO assignments and filter the principalId with principalType `GROUP`
 4. Describe the SSO groups and get the DisplayName
 5. Parse the data as seen below
