@@ -70,7 +70,7 @@ Groups data structure
 go run . groups --identityStoreId IDENTITY_STORE_ID --instanceArn INSTANCE_ARN --region AWS_REGION
 ```
 
-Groups data structure
+Accounts data structure
 ```shell
 go run . accounts  --identityStoreId IDENTITY_STORE_ID --instanceArn INSTANCE_ARN --region AWS_REGION
 ```
